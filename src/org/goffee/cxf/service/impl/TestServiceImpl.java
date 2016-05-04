@@ -13,4 +13,10 @@ public class TestServiceImpl implements TestService {
 		return "Hello " + who;
 	}
 
+	@Override
+	public String moreValues(String a, String b) {
+		// TODO Auto-generated method stub
+		return "Two Values, A:" + a + ", B:" + b;
+	}
+
 }

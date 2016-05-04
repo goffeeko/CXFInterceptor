@@ -6,7 +6,7 @@ import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.goffee.cxf.client.interceptor.AuthAddInterceptor;
 import org.goffee.cxf.service.TestService;
 
-public class Test {
+public class TestMoreValues {
 
 	public static void main(String[] args) {
 		JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
@@ -20,7 +20,7 @@ public class Test {
 		factory.getOutInterceptors().add(new LoggingOutInterceptor());
 
 		TestService testService = factory.create(TestService.class);
-		String welcome = testService.sayHello("goffee");
+		String welcome = testService.moreValues("value1", "value2");
 		System.out.println(welcome);
 	}
 }

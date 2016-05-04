@@ -17,7 +17,6 @@
         </jaxws:inInterceptors>
         <jaxws:outInterceptors>
             <bean class="org.apache.cxf.interceptor.LoggingOutInterceptor"></bean>
-            <bean class="org.goffee.cxf.server.interceptor.AuthInterceptor"></bean>
         </jaxws:outInterceptors>
     </jaxws:endpoint>
 

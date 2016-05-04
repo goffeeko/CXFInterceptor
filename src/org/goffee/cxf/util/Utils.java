@@ -1,8 +1,19 @@
 package org.goffee.cxf.util;
 
-public final class Utils {
+import java.util.List;
 
-	String checksum(String name) {
-		return null;
+public class Utils {
+
+	public static String checksum(List<?> params) {
+		
+		StringBuffer sb = new StringBuffer();
+		
+		for (Object param : params) {
+			sb.append(param.toString());
+		}
+		
+		String checksum = "CHECKSUM" + sb.toString();
+		System.out.println("In Util:" + checksum);
+		return checksum;
 	}
 }
